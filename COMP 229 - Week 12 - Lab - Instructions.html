@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h3 id="week-12-lab-deploying-react-and-node-apps-using-render">Week 12 Lab: Deploying React and Node Apps using Render</h3>
+<h4 id="objective"><strong>Objective</strong></h4>
+<p>In this lab, you will modify the provided code to use environment variables in both the React and Node.js servers. You will deploy the project to GitHub, create a Render account, connect Render to the appropriate repositories, and set up the environment variables in Render. By the end, your deployed application should correctly display a smiley face emoji when everything is set up properly, and a frown emoji if something is broken.</p>
+<h4 id="instructions"><strong>Instructions</strong></h4>
+<ol>
+<li>
+<p><strong>Modify the Code to Use Environment Variables</strong></p>
+<ul>
+<li>
+<p>Update both the React and Node.js projects to use environment variables.</p>
+<ul>
+<li>
+<p>For the React frontend, modify the API endpoint URL so that it reads from an environment variable. Use a <code>.env</code> file in the project root to store this variable, and ensure it follows the naming convention (<code>VITE_BE_URL</code> for Vite projects).</p>
+</li>
+<li>
+<p>In the Node.js backend, change the MongoDB connection string to read from an environment variable (<code>MONGO_URI</code>).</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Pushing the Project to GitHub</strong></p>
+<ul>
+<li>
+<p>Initialize a Git repository for both projects if not already done.</p>
+</li>
+<li>
+<p>Commit your changes and push both the React and Node.js projects to separate repositories on GitHub.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Create Render Accounts and Deploy</strong></p>
+<ul>
+<li>
+<p><strong>Create a Render Account</strong> if you don’t already have one.</p>
+</li>
+<li>
+<p><strong>Deploy the Backend</strong>:</p>
+<ul>
+<li>
+<p>Create a new Web Service in Render.</p>
+</li>
+<li>
+<p>Connect the Node.js repository from GitHub.</p>
+</li>
+<li>
+<p>Set up the environment variables in Render for the MongoDB URI (<code>MONGO_URI</code>).</p>
+</li>
+<li>
+<p>Deploy the service and note the deployed URL.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Deploy the Frontend</strong>:</p>
+<ul>
+<li>
+<p>Create a new Static Site in Render.</p>
+</li>
+<li>
+<p>Connect the React repository from GitHub.</p>
+</li>
+<li>
+<p>Set up the environment variable (<code>VITE_BE_URL</code>) to point to the backend URL obtained from the previous step.</p>
+</li>
+<li>
+<p>Deploy the static site.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Testing Your Application</strong></p>
+<ul>
+<li>
+<p>Once both the frontend and backend are deployed, navigate to your deployed frontend site.</p>
+</li>
+<li>
+<p>Click the ‘Click Me!’ button.</p>
+</li>
+<li>
+<p>If everything is configured correctly and your backend returns a successful response, you should see a smiley face emoji appear.</p>
+</li>
+<li>
+<p>If there is an error in configuration, a frown emoji will be displayed instead.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="notes"><strong>Notes</strong></h4>
+<ul>
+<li>
+<p>Ensure that you do not push your <code>.env</code> files to GitHub. Make sure <code>.gitignore</code> includes these files.</p>
+</li>
+<li>
+<p>Environment variables are crucial to maintain security for sensitive information such as API URLs and database URIs.</p>
+</li>
+</ul>
+<h4 id="helpful-tips"><strong>Helpful Tips</strong></h4>
+<ul>
+<li>
+<p>For <strong>React</strong>, use the <code>import.meta.env</code> syntax to access environment variables that start with <code>VITE_</code>.</p>
+</li>
+<li>
+<p>For <strong>Node.js</strong>, access environment variables using <code>process.env.VARIABLE_NAME</code>.</p>
+</li>
+<li>
+<p>Double-check that the URLs in your environment variables match the deployed URLs on Render.</p>
+</li>
+<li>
+<p>Use Render’s <strong>Logs</strong> feature to debug any issues during deployment.</p>
+</li>
+</ul>
+</div>
+</body>
+
+</html>
